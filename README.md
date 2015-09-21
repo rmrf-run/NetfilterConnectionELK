@@ -1,5 +1,5 @@
 ###Log nf_conntrack results and ship logs to ELK stack
-[screenshot](https://raw.githubusercontent.com/mylivingweb/NetfilterConnectionELK/master/screenshot.png "Screenshot ELK Netfilter Connections")
+![screenshot](https://raw.githubusercontent.com/mylivingweb/NetfilterConnectionELK/master/screenshot.png "Screenshot ELK Netfilter Connections")
 
 ####Tested and working on CentOS 6 and 7 boxes
 
