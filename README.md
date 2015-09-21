@@ -18,6 +18,12 @@ conns=$(cat /proc/sys/net/netfilter/nf_conntrack_count)
 echo "$(date) $(hostname) $(hostname -I)nf_conntrack $conns" >> /var/log/conntrack
 ```
 
+#####In your crontab file put the follow in, be sure to edit the time if you don't need it ran every minute:
+```bash
+*/1 * * * * /bin/bash /root/conntrack
+```
+
+#####chmod u+x conntrack to make it excutable
 
 #####in your logstash forwarder file, put the below snippet in:
 ```json
@@ -42,5 +48,5 @@ grok {
         mutate {
                 convert => { "cons" => "integer"}
 }
-
+```
 
