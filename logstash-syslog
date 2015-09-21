@@ -1,0 +1,8 @@
+grok {
+        match => { "message" => "%{DATESTAMP_OTHER} %{HOSTNAME:host} %{IPV4:ip} %{SYSLOGPROG} %{BASE10NUM:cons:int}" }
+        add_field => [ "received_at", "%{@timestamp}" ]
+        add_tag => ["netfilter-connections"]
+        }
+        mutate {
+                convert => { "cons" => "integer"}
+}

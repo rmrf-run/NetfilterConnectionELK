@@ -1,0 +1,6 @@
+{
+      "paths": [
+        "/var/log/conntrack"
+       ],
+      "fields": { "type": "syslog" }
+}

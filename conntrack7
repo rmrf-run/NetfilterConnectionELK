@@ -1,0 +1,3 @@
+#!/bin/bash
+conns=$(cat /proc/sys/net/netfilter/nf_conntrack_count)
+echo "$(date) $(hostname) $(hostname -I)nf_conntrack $conns" >> /var/log/conntrack
